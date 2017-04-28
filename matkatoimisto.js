@@ -5,14 +5,10 @@ var MongoClient = require('mongodb').MongoClient
 
 
 var engines = require('consolidate');
-// app.engine('handlebars', engines.handlebars);
 app.engine('ejs', engines.ejs);
 
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
-//app.set('view engine', '.ejs');
-//app.set('view engine', 'views');
-
 
 app.set('port', process.env.PORT || 3000);
 
@@ -62,7 +58,6 @@ app.get('/kaava', function(req, res){
 });
 
 
-
 app.get('/uutiskirje', function(req, res){ 
 res.render('uutiskirje', { csrf: 'CSRF token goes here' }); 
 }); 
@@ -71,7 +66,6 @@ app.get('/viisumihakemus', function(req, res){
 res.render('viisumihakemus', { csrf: 'CSRF token goes here' }); 
 }); 
 
-
 var db
 
 MongoClient.connect('mongodb://Matkatoimisto:Ryhma13@ds159180.mlab.com:59180/matkatoimisto_13', (err, database) => {
@@ -79,7 +73,6 @@ MongoClient.connect('mongodb://Matkatoimisto:Ryhma13@ds159180.mlab.com:59180/mat
   db = database
 
 })
-
 
  app.get('/lue_uusi', (req, res) => {
   db.collection('Uutiskirje').find().toArray((err, result) => {
@@ -97,7 +90,6 @@ app.get('/lue_viisumi', (req, res) => {
   })
 })
 
-
 app.post('/process', function(req, res){ 
   db.collection('Uutiskirje').save(req.body, (err, result) => {
     if (err) return console.log(err)
@@ -109,7 +101,6 @@ console.log('Sähköposti: ' + req.body.email);
 res.redirect(303, 'kiitos'); 
 	})
 })
-
 
 app.post('/process1', function(req, res){ 
   db.collection('Viisumihakemus').save(req.body, (err, result) => {
@@ -125,7 +116,6 @@ console.log('Viisumihakemuksen tarkoitus:  ' + req.body.viesti);
 res.redirect(303, 'viisumihakemus'); 
 	})
 })
-
 
 app.use(function(req, res){
 
