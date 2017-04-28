@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uutiskijeen tilaajat</title>
+</head>
+<body>
+
+<h4><a href="/home">Takaisin etusivulle</a></h4>
+
+ <h3> Uutiskirjeen tilaajat:</h3>
+
+  <ul class="Uutiskirje">
+  <% for(var i=0; i<Uutiskirje.length; i++) {%>
+    <li class="Uutiskirje">
+      <span><%= Uutiskirje[i].name %></span><br/>
+      <span><%= Uutiskirje[i].email %></span>
+    </li>
+  <% } %>
+  </ul>
+
+
+</body>
+</html>

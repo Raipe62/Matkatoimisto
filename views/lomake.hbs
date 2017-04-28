@@ -1,0 +1,33 @@
+﻿<h3><a href="/home">Takaisin etusivulle</a></h3>
+
+<h2>Rekisteröidy postituslistallemme niin saat tuoreimmat <br/>uutiset ja tiedot parhaista tarjouksistamme!</h2>
+<form class="form-horizontal" role="form" 
+action="/process?form=uutiskirje" method="POST">
+
+
+    <input type="hidden" name="_csrf" value="{{csrf}}"> 
+       <div class="form-group"> 
+			<label for="fieldName" class="col-sm-2 control-label"> Nimi </label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control"
+						id="fieldName" name="name">
+				</div>
+      </div> <br/>
+	  
+<div class="form-group"> 
+	  
+	<label for="fieldEmail" class="col-sm-2 control-label"> Sähköposti</label>
+
+		<div class="col-sm-4"> 
+          <input type="email" class="form-control" required 
+					id="fieldEmail" name="email"> 
+		</div> 
+</div><br/>
+
+<div class="form-group"> 
+          <div class="col-sm-offset-2 col-sm-4"> 
+				<button type="submit" class="btn btn-default"> Rekisteröidy</button> 
+           </div> 
+</div> 
+</form> 
+ 

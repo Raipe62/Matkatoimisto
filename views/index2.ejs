@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viisumihakemukset</title>
+</head>
+<body>
+
+<h4><a href="/home">Takaisin etusivulle</a></h4>
+
+ <h3>Jätetyt viisumihakemukset:</h3>
+
+  <ul class="Viisumihakemus">
+  <% for(var i=0; i<Viisumihakemus.length; i++) {%>
+    <li class="Viisumihakemus">
+      <span><%= Viisumihakemus[i].lastname %></span><br/>
+      <span><%= Viisumihakemus[i].firstnames %></span><br/>
+	  <span><%= Viisumihakemus[i].ht %></span><br/>
+	  <span><%= Viisumihakemus[i].email %></span><br/>
+      <span><%= Viisumihakemus[i].viesti %></span><br/>
+    </li>
+  <% } %>
+  </ul>
+
+</body>
+</html>
