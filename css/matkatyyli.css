@@ -1,0 +1,52 @@
+h1{
+	background-color: #F0FFFF;
+}
+
+body{
+	margin-left: 5em;
+	background-color: #F0FFA0;
+}
+
+form {
+	 max-width: 50em; margin: 3em; 
+	 background-color: #F5F5DC;
+	 font-size: 1.3em;
+
+}
+
+
+
+textarea{
+	width:30em;
+	height:4em;
+
+}
+
+button{
+	
+	width:10em;
+	height:3em;
+}
+
+#send{
+	width:10em;
+	height:3em;
+}
+
+#kansa{
+	background-color: #e6fff2;
+}
+	
+input:required {
+    background-color: #e6fff2;
+	min-height: 2em;
+	min-width: 23em;
+	border-color:green;
+}
+	
+.venaja{
+	height:200px;
+}
+.uutinen{
+	width:400px;
+}

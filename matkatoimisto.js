@@ -4,36 +4,6 @@ var exphbs = require('express-handlebars');
 var MongoClient = require('mongodb').MongoClient
 
 
-// GIT **************************************
-
-// var nodegit = require('nodegit'),
-    // path = require('path');
-
-// var url = "https://github.com/pazdera/scriptster.git",
-    // local = "./scriptster",
-    // cloneOpts = {};
-
-// nodegit.Clone(url, local, cloneOpts).then(function (repo) {
-    // console.log("Cloned " + path.basename(url) + " to " + repo.workdir());
-// }).catch(function (err) {
-    // console.log(err);
-// });
-
-
-// var nodegit = require('nodegit');
-
-// nodegit.Repository.open('./scriptster').then(function(repo) {
-  // console.log("Using " + repo.path());
-// }).catch(function (err) {
-  // console.log(err);
-// });
-
-
-
-
-// GIT ends  *****************************************
-
-
 var engines = require('consolidate');
 // app.engine('handlebars', engines.handlebars);
 app.engine('ejs', engines.ejs);
